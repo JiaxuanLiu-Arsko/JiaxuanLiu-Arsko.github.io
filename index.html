@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiaxuan Liu — Personal Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-item strong {
+            min-width: 80px;
+            color: #34495e;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .password-section {
+            background: #ecf0f1;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .password-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .password-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .password-input input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .password-input input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: white;
+            margin: 10px;
+        }
+
+        .btn-success:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn-warning {
+            background: #f39c12;
+            color: white;
+            margin: 10px;
+        }
+
+        .btn-warning:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 20px;
+                margin-top: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-item strong {
+                min-width: auto;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>Jiaxuan Liu</h1>
+                <p>Condensed Matter Physics · AI for Science · Moiré Materials · Computational Physics</p>
+            </div>
+
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <div class="contact-item">
+                    <strong>Email: </strong>
+                    <a href="mailto:liujiaxuan23@mails.ucas.ac.cn">liujiaxuan23@mails.ucas.ac.cn</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Institute: </strong>
+                    <span>IOPCAS</span>
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub：</strong>
+                    <a href="https://github.com/JiaxuanLiu-Arsko" target="_blank">@JiaxuanLiu-Arsko</a>
+                </div>
+            </div>
+
+            <div class="password-section">
+                <h2>Project Access</h2>
+                <p style="margin-bottom: 20px; color: #7f8c8d;">Enter password to access specific project pages</p>
+                
+                <div class="password-input">
+                    <input type="password" id="passwordInput" placeholder="Enter password...">
+                    <button class="btn btn-primary" onclick="verifyPassword()">Verify Password</button>
+                </div>
+                
+                <div id="message" class="message"></div>
+                
+                <div class="button-group" id="projectButtons" style="display: none;">
+                    <button class="btn btn-success" data-project="Twist database candidate materials" data-url="https://brown-provisions-mason-dietary.trycloudflare.com/" onclick="openProject(this)">Twist database candidate materials</button>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2025 Jiaxuan Liu · Built with GitHub Pages</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // SHA-256 哈希函数
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+
+        // 密码验证函数
+        async function verifyPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const message = document.getElementById('message');
+            const projectButtons = document.getElementById('projectButtons');
+            
+            // 这里设置你的密码哈希值（使用 SHA-256 哈希）
+            // 例如，你可以使用以下命令生成哈希：echo -n "your_password" | sha256sum
+            const correctPasswordHash = 'ac5bbbcc5ba662d7f6efa359fe3703bac7e9abd3a71db9fa66ca4310a722d8c7'; // 这是空字符串的哈希，请替换为实际密码的哈希
+            
+            const inputHash = await sha256(password);
+            
+            if (inputHash === correctPasswordHash) {
+                message.className = 'message success';
+                message.textContent = 'Password correct! Now you can access the project pages.';
+                message.style.display = 'block';
+                projectButtons.style.display = 'block';
+                
+                // 清空密码输入框
+                document.getElementById('passwordInput').value = '';
+            } else {
+                message.className = 'message error';
+                message.textContent = 'Password incorrect, please try again!';
+                message.style.display = 'block';
+                projectButtons.style.display = 'none';
+            }
+            
+            // 3秒后隐藏消息
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 3000);
+        }
+        
+        // 打开项目页面
+        function openProject(button) {
+            const url = button.getAttribute('data-url');
+            if (url && url !== 'https://example.com/project1') {
+                window.open(url, '_blank');
+            } else {
+                alert('Project link not set!');
+            }
+        }
+        
+        // 回车键触发密码验证
+        document.getElementById('passwordInput').addEventListener('keypress', async function(event) {
+            if (event.key === 'Enter') {
+                await verifyPassword();
+            }
+        });
+    </script>
+</body>
+</html>
